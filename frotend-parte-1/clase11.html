@@ -24,8 +24,71 @@
             margin: 0;
             font-family: 'Quicksand', sans-serif;
         }
+        nav{
+            display: flex;
+            border-bottom: 1px solid var(--Very-light-pink);
+            justify-content: space-between;
+            padding: 0 20px 0 24px;
+        }
         .img-menu{
             display: none;
+        }
+        .logo{
+            width: 100px;
+        }
+        .navbar-left{
+            display: flex;
+        }
+        .navbar-left ul{
+            margin-left: 18px;
+        }
+        .navbar-left ul, .navbar-right ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            height: 60px;
+        }
+        .navbar-left ul li a, .navbar-right ul li a{
+            text-decoration: none;
+            color: var(--Very-light-pink);
+            border: 1px solid var(--White);
+            padding: 8px;
+            border-radius: 8px;
+        }
+        .navbar-left ul li a:hover, .navbar-right ul li a:hover{
+            border: 1px solid var(--Hospital-green);
+            color: var(--Hospital-green);
+        }.navbar-email{
+            color: var(--Very-light-pink);
+            font-size: var(--sm);
+            margin-right: 20px;
+        }
+        .navbar-shopping-cart{
+            position: relative;
+        }
+        .navbar-shopping-cart div{
+            width: 8px;
+            height: 8px;
+            background-color: var(--Hospital-green);
+            border-radius: 50%;
+            font-size: var(--sm);
+            font-weight: bold;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 0;
+            right: 2px;
+        }
+        @media(max-width: 640px){
+            .img-menu{
+                display: block;
+            }
+            .navbar-left ul, .navbar-email{
+                display: none;
+            }
         }
     </style>
 </head>
@@ -61,10 +124,11 @@
 
         <div class="navbar-right">
             <ul>
-                <li>example@gmail.com</li>
-                <li class="navbar-shopping-cart"></li>
-                <img src="../assets/icons/icon_shopping_cart_notification.svg" alt="shopping" class="icono">
-                <div>2</div>
+                <li class="navbar-email">example@gmail.com</li>
+                <li class="navbar-shopping-cart">
+                    <img src="../assets/icons/icon_shopping_cart_notification.svg" alt="shopping" class="icono">
+                    <div>2</div>
+                </li>
             </ul>
         </div>
     </nav>
