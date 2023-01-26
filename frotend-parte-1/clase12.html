@@ -27,24 +27,53 @@
         .product-detail{
             width: 360px;
             padding-bottom: 24px;
+            position: absolute;
+            right: 0;
+        }
+        .product-info{
+            margin: 24px 24px 0 24px;
+        }
+        .product-info p:nth-child(1){
+            font-weight: bold;
+            font-size: var(--md);
+            margin-top: 0;
+            margin-bottom: 4px;
+        }
+        .product-info p:nth-child(2){
+            color: var(--Very-light-pink);
+            font-size: var(--md);
+            margin-top: 0;
+            margin-bottom: 36px;
+        }
+        .product-info p:nth-child(3){
+            color: var(--Very-light-pink);
+            font-size: var(--sm);
         }
         .product-detail-close{
             background-color: var(--White);
             position: absolute;
             top: 12px; /* Posiblemente 24px */
             left: 12px; /* Posiblemente 24px */
-            width: 14px; 
-            height: 14px;
+            width: 9px; 
+            height: 9px;
             z-index: 2;
-            padding: 12px;
+            padding: 10px;
             border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .product-detail-close:hover{
             cursor:pointer;
         }
+        .product-detail-close img{
+            width: 80%;
+            height: 80%;
+        }
         .product-detail > img:nth-child(2){
             width: 100%;
             height: 360px;
+            border-radius: 30px;
         }
         .primary-button{
             background-color: var(--Hospital-green);
@@ -62,6 +91,11 @@
             align-items: center;
             justify-content: center;
         }
+        @media(max-width: 640px){
+            .product-detail{
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -71,7 +105,7 @@
         </div>
         <img src="https://images.pexels.com/photos/914996/pexels-photo-914996.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="patines">
         <div class="product-info">
-            <p>100,00</p>
+            <p>$100,00</p>
             <p>Patines</p>
             <p>
                 With its functional and practical interior, this refrigerator also fulfills a decorative function, adding personality and a retro-vintage aesthetic to your kitchen or workplace.
