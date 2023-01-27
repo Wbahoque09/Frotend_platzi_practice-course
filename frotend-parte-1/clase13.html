@@ -26,9 +26,21 @@
         }
         .product-detail{
             width: 360px;
-            padding-bottom: 24px;
+            padding: 24px;
             position: absolute;
             right: 0;
+            box-sizing: border-box;
+        }
+        .title-container{
+            display: flex;
+        }
+        .title-container img{
+            transform: rotate(180deg);
+        }
+        .title{
+            font-size: var(--lg);
+            font-weight: bold;
+            padding-left: 10px;
         }
         .primary-button{
             background-color: var(--Hospital-green);
@@ -61,15 +73,34 @@
             padding-bottom: 4px;
             font-weight: bold;
         }
-        .order p span:nth-child(2){
-            font-size: var(--sm);
-            color: var(--Very-light-pink);
-        }
         .order p:nth-child(2){
             text-align: right;
             font-weight: bold;
             font-size: var(--md);
             color: var(--Dark);
+        }
+        .shopping-cart figure{
+            margin: 0;
+        }
+        .shopping-cart figure img{
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+        .shopping-cart p:nth-child(2){
+            color: var(--Very-light-pink);
+        }
+        .shopping-cart p:nth-child(3){
+            font-size: var(--md);
+            font-weight: bold;
+        }
+        .shopping-cart{
+            display: grid;
+            grid-template-columns: auto 1fr auto auto;
+            gap: 16px;
+            margin-bottom: 24px;
+            align-items: center;
         }
         @media(max-width: 640px){
             .product-detail{
@@ -80,6 +111,10 @@
 </head>
 <body>
     <aside class="product-detail">
+        <div class="title-container">
+            <img src="../assets/icons/flechita.svg" alt="arrow">
+            <p class="title">My order</p>
+        </div>
         <div class="my-order-content">
         </div>
         <div class="shopping-cart">
@@ -88,6 +123,7 @@
             </figure>
             <p>Patines</p>
             <p>$100.00</p>
+            <img src="../assets/icons/icon_close.png" alt="close">
         </div>
         <div class="shopping-cart">
             <figure>
@@ -95,6 +131,7 @@
             </figure>
             <p>Patines</p>
             <p>$100.00</p>
+            <img src="../assets/icons/icon_close.png" alt="close">
         </div>
         <div class="shopping-cart">
             <figure>
@@ -102,14 +139,17 @@
             </figure>
             <p>Patines</p>
             <p>$100.00</p>
+            <img src="../assets/icons/icon_close.png" alt="close">
         </div>
         <div class="order">
             <p>
-                <span>04.25.21</span>
-                <span>6 article</span>
+                <span>Total</span>
             </p>
             <p>$560.00</p>
         </div>
+        <button class="primary-button">
+            Checkout
+        </button>
     </aside>
 </body>
 </html>
